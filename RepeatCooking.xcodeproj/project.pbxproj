@@ -16,6 +16,8 @@
 		1108336725F0169800903FE3 /* RepeatCookingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1108336625F0169800903FE3 /* RepeatCookingTests.swift */; };
 		1108337225F0169800903FE3 /* RepeatCookingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1108337125F0169800903FE3 /* RepeatCookingUITests.swift */; };
 		1108338425F01A8200903FE3 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 1108338325F01A8200903FE3 /* ComposableArchitecture */; };
+		1185038725F3CDDB004A31A3 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1185038625F3CDDB004A31A3 /* EditView.swift */; };
+		1185038F25F3CE05004A31A3 /* EditStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1185038E25F3CE05004A31A3 /* EditStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		1108336D25F0169800903FE3 /* RepeatCookingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RepeatCookingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1108337125F0169800903FE3 /* RepeatCookingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatCookingUITests.swift; sourceTree = "<group>"; };
 		1108337325F0169800903FE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1185038625F3CDDB004A31A3 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
+		1185038E25F3CE05004A31A3 /* EditStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,7 @@
 		1108334E25F0169600903FE3 /* RepeatCooking */ = {
 			isa = PBXGroup;
 			children = (
+				1185038525F3CDBA004A31A3 /* EditView */,
 				1108334F25F0169600903FE3 /* AppDelegate.swift */,
 				1108335125F0169600903FE3 /* SceneDelegate.swift */,
 				1108335325F0169600903FE3 /* ContentView.swift */,
@@ -136,6 +141,15 @@
 				1108337325F0169800903FE3 /* Info.plist */,
 			);
 			path = RepeatCookingUITests;
+			sourceTree = "<group>";
+		};
+		1185038525F3CDBA004A31A3 /* EditView */ = {
+			isa = PBXGroup;
+			children = (
+				1185038625F3CDDB004A31A3 /* EditView.swift */,
+				1185038E25F3CE05004A31A3 /* EditStore.swift */,
+			);
+			path = EditView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,7 +289,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1108335025F0169600903FE3 /* AppDelegate.swift in Sources */,
+				1185038F25F3CE05004A31A3 /* EditStore.swift in Sources */,
 				1108335225F0169600903FE3 /* SceneDelegate.swift in Sources */,
+				1185038725F3CDDB004A31A3 /* EditView.swift in Sources */,
 				1108335425F0169600903FE3 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
