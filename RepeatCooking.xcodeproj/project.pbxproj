@@ -107,6 +107,7 @@
 		1108334E25F0169600903FE3 /* RepeatCooking */ = {
 			isa = PBXGroup;
 			children = (
+				1188644A25F5690F00830671 /* Components */,
 				1185038525F3CDBA004A31A3 /* EditView */,
 				1108334F25F0169600903FE3 /* AppDelegate.swift */,
 				1108335125F0169600903FE3 /* SceneDelegate.swift */,
@@ -150,9 +151,16 @@
 			children = (
 				1185038625F3CDDB004A31A3 /* EditView.swift */,
 				1185038E25F3CE05004A31A3 /* EditStore.swift */,
-				11F3B30425F4466C00CE638F /* TextEditor.swift */,
 			);
 			path = EditView;
+			sourceTree = "<group>";
+		};
+		1188644A25F5690F00830671 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				11F3B30425F4466C00CE638F /* TextEditor.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
