@@ -18,6 +18,7 @@
 		1108338425F01A8200903FE3 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 1108338325F01A8200903FE3 /* ComposableArchitecture */; };
 		1185038725F3CDDB004A31A3 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1185038625F3CDDB004A31A3 /* EditView.swift */; };
 		1185038F25F3CE05004A31A3 /* EditStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1185038E25F3CE05004A31A3 /* EditStore.swift */; };
+		11E25DFB25F66BC600FC065C /* CALayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E25DFA25F66BC600FC065C /* CALayerView.swift */; };
 		11F3B30525F4466C00CE638F /* TextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F3B30425F4466C00CE638F /* TextEditor.swift */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,7 @@
 		1108337325F0169800903FE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1185038625F3CDDB004A31A3 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 		1185038E25F3CE05004A31A3 /* EditStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditStore.swift; sourceTree = "<group>"; };
+		11E25DFA25F66BC600FC065C /* CALayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayerView.swift; sourceTree = "<group>"; };
 		11F3B30425F4466C00CE638F /* TextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEditor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -159,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				11F3B30425F4466C00CE638F /* TextEditor.swift */,
+				11E25DFA25F66BC600FC065C /* CALayerView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				1185038F25F3CE05004A31A3 /* EditStore.swift in Sources */,
 				1108335225F0169600903FE3 /* SceneDelegate.swift in Sources */,
 				1185038725F3CDDB004A31A3 /* EditView.swift in Sources */,
+				11E25DFB25F66BC600FC065C /* CALayerView.swift in Sources */,
 				1108335425F0169600903FE3 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

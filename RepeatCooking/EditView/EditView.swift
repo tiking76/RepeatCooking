@@ -12,17 +12,21 @@ struct EditView: View {
     @State var text: String = ""
     var body: some View {
         VStack {
-            Image("Camera")
-                .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
+            Button(action: {}, label: {
+                Image("Camera")
+            })
+            .padding(EdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20))
             Form(content: {
                 Section(header: Text("日時")) {
                     DatePicker("", selection: $date,
                         displayedComponents: .date)
-                        .frame(width: 230, height: 10, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                        .frame(width: 300, height: 20, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                        .labelsHidden()
+
                 }
                 Section(header: Text("point")) {
                 TextEditor(text: $text)
-                    .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                    .frame(width: 300, height: 100, alignment: .leading)
                 }
             })
         }
@@ -31,6 +35,8 @@ struct EditView: View {
 
 struct EditView_Previews: PreviewProvider {
     static var previews: some View {
-        EditView()
+        Group {
+            EditView()
+        }
     }
 }

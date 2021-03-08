@@ -5,6 +5,7 @@
 //  Created by tiking on 2021/03/07.
 //
 import SwiftUI
+
 // 複数行入力するためのTextField
 struct TextEditer: UIViewRepresentable {
     @Binding var text: String
