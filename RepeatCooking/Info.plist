@@ -6,6 +6,10 @@
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>NSCameraUsageDescription</key>
 	<string>take your video for sample swiftUI app</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>save Photo</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>save photo</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>

@@ -10,13 +10,21 @@ import SwiftUI
 struct EditView: View {
     @State var date = Date()
     @State var text: String = ""
+    @State var isShow: Bool = false
+    @State var image: UIImage = UIImage(imageLiteralResourceName: "Camera")
     var body: some View {
         VStack {
-            Button(action: {}, label: {
-                Image("Camera")
-            })
-            .padding(EdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20))
             Form(content: {
+                Button(action: {
+                    isShow.toggle()
+                }, label: {
+                    Image(uiImage: image)
+                        .resizable()
+                        .frame(width: .infinity, height: 200, alignment: .center)
+                })
+                .fullScreenCover(isPresented: $isShow, content: {
+                    CameraView(isActive: $isShow, image: $image)
+                })
                 Section(header: Text("日時")) {
                     DatePicker("", selection: $date,
                         displayedComponents: .date)
@@ -27,6 +35,9 @@ struct EditView: View {
                 Section(header: Text("ひとこと")) {
                 TextEditor(text: $text)
                     .frame(width: 300, height: 100, alignment: .leading)
+                    .onTapGesture {
+                        UIApplication.shared.closeKeyboard()
+                    }
                 }
             })
         }
