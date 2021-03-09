@@ -24,7 +24,7 @@ struct EditView: View {
                         .labelsHidden()
 
                 }
-                Section(header: Text("point")) {
+                Section(header: Text("ひとこと")) {
                 TextEditor(text: $text)
                     .frame(width: 300, height: 100, alignment: .leading)
                 }

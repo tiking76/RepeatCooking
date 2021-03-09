@@ -160,10 +160,18 @@
 		1188644A25F5690F00830671 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				11E25E0225F6F63700FC065C /* Camera */,
 				11F3B30425F4466C00CE638F /* TextEditor.swift */,
-				11E25DFA25F66BC600FC065C /* CALayerView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		11E25E0225F6F63700FC065C /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				11E25DFA25F66BC600FC065C /* CALayerView.swift */,
+			);
+			path = Camera;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
