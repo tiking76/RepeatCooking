@@ -61,7 +61,8 @@ struct CameraView: View {
                         }
                         .frame(width: 80, height: 80, alignment: .center)
                         Button(action: {
-                            UIImageWriteToSavedPhotosAlbum(avFoundationVM.image!, nil, nil, nil)
+                            //ここをDBに保存する形にする
+                            //UIImageWriteToSavedPhotosAlbum(avFoundationVM.image!, nil, nil, nil)
                             image = avFoundationVM.image!
                             self.isActive.toggle()
                         }, label: {
