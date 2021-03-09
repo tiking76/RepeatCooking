@@ -47,27 +47,29 @@ struct CameraView: View {
 
                         Spacer()
                     }
-                    Button(action: {
-                        avFoundationVM.image = nil
-                        self.isActive.toggle()
-                    }) {
-                            Image(systemName: "xmark.circle.fill")
-                            .renderingMode(.original)
-                            .resizable()
-                            .frame(width: 30, height: 30, alignment: .leading)
-                            .foregroundColor(.white)
-                            .background(Color.gray)
+                    HStack{
+                        Button(action: {
+                            avFoundationVM.image = nil
+                            self.isActive.toggle()
+                        }) {
+                                Image(systemName: "xmark.circle.fill")
+                                .renderingMode(.original)
+                                .resizable()
+                                .frame(width: 30, height: 30, alignment: .leading)
+                                .foregroundColor(.white)
+                                .background(Color.gray)
+                        }
+                        .frame(width: 80, height: 80, alignment: .center)
+                        Button(action: {
+                            UIImageWriteToSavedPhotosAlbum(avFoundationVM.image!, nil, nil, nil)
+                            image = avFoundationVM.image!
+                            self.isActive.toggle()
+                        }, label: {
+                            Text("保存")
+                                .frame(width: 80, height: 80, alignment: .trailing)
+        
+                        })
                     }
-                    .frame(width: 80, height: 80, alignment: .center)
-                    Button(action: {
-                        UIImageWriteToSavedPhotosAlbum(avFoundationVM.image!, nil, nil, nil)
-                        image = avFoundationVM.image!
-                        self.isActive.toggle()
-                    }, label: {
-                        Text("Button")
-                            .frame(width: 80, height: 80, alignment: .trailing)
-    
-                    })
                 }
             }
         }
