@@ -20,7 +20,10 @@ struct EditView: View {
                 }, label: {
                     Image(uiImage: image)
                         .resizable()
-                        .frame(width: .infinity, height: 200, alignment: .center)
+                        .frame(maxWidth: .infinity,
+                               minHeight: 200,
+                               maxHeight: 200,
+                               alignment: .center)
                 })
                 .fullScreenCover(isPresented: $isShow, content: {
                     CameraView(isActive: $isShow, image: $image)
@@ -34,7 +37,10 @@ struct EditView: View {
                 }
                 Section(header: Text("ひとこと")) {
                 TextEditor(text: $text)
-                    .frame(width: 300, height: 100, alignment: .leading)
+                    .frame(maxWidth: .infinity,
+                           minHeight: 100,
+                           maxHeight: 100,
+                           alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                     .onTapGesture {
                         UIApplication.shared.closeKeyboard()
                     }
