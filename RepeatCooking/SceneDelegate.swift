@@ -20,5 +20,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window.makeKeyAndVisible()
         }
     }
+    func sceneDidEnterBackground(_ scene: UIScene) {
+        // 保存処理
+        (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+    }
 }
 
