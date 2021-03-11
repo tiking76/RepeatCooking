@@ -51,6 +51,7 @@ class AVFoundationVM: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, Ob
         }
 
         let previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+        previewLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
         self.previewLayer = previewLayer
 
         let dataOutput = AVCaptureVideoDataOutput()
