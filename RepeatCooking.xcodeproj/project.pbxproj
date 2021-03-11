@@ -16,6 +16,15 @@
 		1108336725F0169800903FE3 /* RepeatCookingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1108336625F0169800903FE3 /* RepeatCookingTests.swift */; };
 		1108337225F0169800903FE3 /* RepeatCookingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1108337125F0169800903FE3 /* RepeatCookingUITests.swift */; };
 		1108338425F01A8200903FE3 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 1108338325F01A8200903FE3 /* ComposableArchitecture */; };
+		1185038725F3CDDB004A31A3 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1185038625F3CDDB004A31A3 /* EditView.swift */; };
+		1185038F25F3CE05004A31A3 /* EditStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1185038E25F3CE05004A31A3 /* EditStore.swift */; };
+		11B4CC9625F7C0CA000843FB /* AVFoundationVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B4CC9525F7C0CA000843FB /* AVFoundationVM.swift */; };
+		11B4CCC725F7D07E000843FB /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B4CCC625F7D07E000843FB /* CameraView.swift */; };
+		11B4CCCD25F7EC94000843FB /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B4CCCC25F7EC94000843FB /* UIApplication.swift */; };
+		11B4CCD525F9600A000843FB /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B4CCD425F9600A000843FB /* Date.swift */; };
+		11B4CCDD25F9C64D000843FB /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B4CCDC25F9C64D000843FB /* Keyboard.swift */; };
+		11E25DFB25F66BC600FC065C /* CALayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E25DFA25F66BC600FC065C /* CALayerView.swift */; };
+		11F3B30525F4466C00CE638F /* TextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F3B30425F4466C00CE638F /* TextEditor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +59,15 @@
 		1108336D25F0169800903FE3 /* RepeatCookingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RepeatCookingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1108337125F0169800903FE3 /* RepeatCookingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatCookingUITests.swift; sourceTree = "<group>"; };
 		1108337325F0169800903FE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1185038625F3CDDB004A31A3 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
+		1185038E25F3CE05004A31A3 /* EditStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditStore.swift; sourceTree = "<group>"; };
+		11B4CC9525F7C0CA000843FB /* AVFoundationVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVFoundationVM.swift; sourceTree = "<group>"; };
+		11B4CCC625F7D07E000843FB /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		11B4CCCC25F7EC94000843FB /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
+		11B4CCD425F9600A000843FB /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		11B4CCDC25F9C64D000843FB /* Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
+		11E25DFA25F66BC600FC065C /* CALayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayerView.swift; sourceTree = "<group>"; };
+		11F3B30425F4466C00CE638F /* TextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEditor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +119,9 @@
 		1108334E25F0169600903FE3 /* RepeatCooking */ = {
 			isa = PBXGroup;
 			children = (
+				11B4CCCB25F7EC70000843FB /* Extentions */,
+				1188644A25F5690F00830671 /* Components */,
+				1185038525F3CDBA004A31A3 /* EditView */,
 				1108334F25F0169600903FE3 /* AppDelegate.swift */,
 				1108335125F0169600903FE3 /* SceneDelegate.swift */,
 				1108335325F0169600903FE3 /* ContentView.swift */,
@@ -136,6 +157,44 @@
 				1108337325F0169800903FE3 /* Info.plist */,
 			);
 			path = RepeatCookingUITests;
+			sourceTree = "<group>";
+		};
+		1185038525F3CDBA004A31A3 /* EditView */ = {
+			isa = PBXGroup;
+			children = (
+				1185038625F3CDDB004A31A3 /* EditView.swift */,
+				1185038E25F3CE05004A31A3 /* EditStore.swift */,
+			);
+			path = EditView;
+			sourceTree = "<group>";
+		};
+		1188644A25F5690F00830671 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				11E25E0225F6F63700FC065C /* Camera */,
+				11F3B30425F4466C00CE638F /* TextEditor.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		11B4CCCB25F7EC70000843FB /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				11B4CCCC25F7EC94000843FB /* UIApplication.swift */,
+				11B4CCD425F9600A000843FB /* Date.swift */,
+				11B4CCDC25F9C64D000843FB /* Keyboard.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		11E25E0225F6F63700FC065C /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				11E25DFA25F66BC600FC065C /* CALayerView.swift */,
+				11B4CC9525F7C0CA000843FB /* AVFoundationVM.swift */,
+				11B4CCC625F7D07E000843FB /* CameraView.swift */,
+			);
+			path = Camera;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,8 +333,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11B4CC9625F7C0CA000843FB /* AVFoundationVM.swift in Sources */,
 				1108335025F0169600903FE3 /* AppDelegate.swift in Sources */,
+				11F3B30525F4466C00CE638F /* TextEditor.swift in Sources */,
+				11B4CCC725F7D07E000843FB /* CameraView.swift in Sources */,
+				1185038F25F3CE05004A31A3 /* EditStore.swift in Sources */,
 				1108335225F0169600903FE3 /* SceneDelegate.swift in Sources */,
+				1185038725F3CDDB004A31A3 /* EditView.swift in Sources */,
+				11E25DFB25F66BC600FC065C /* CALayerView.swift in Sources */,
+				11B4CCCD25F7EC94000843FB /* UIApplication.swift in Sources */,
+				11B4CCD525F9600A000843FB /* Date.swift in Sources */,
+				11B4CCDD25F9C64D000843FB /* Keyboard.swift in Sources */,
 				1108335425F0169600903FE3 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
