@@ -22,6 +22,7 @@
 		11B4CCC725F7D07E000843FB /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B4CCC625F7D07E000843FB /* CameraView.swift */; };
 		11B4CCCD25F7EC94000843FB /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B4CCCC25F7EC94000843FB /* UIApplication.swift */; };
 		11B4CCD525F9600A000843FB /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B4CCD425F9600A000843FB /* Date.swift */; };
+		11B4CCDD25F9C64D000843FB /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B4CCDC25F9C64D000843FB /* Keyboard.swift */; };
 		11E25DFB25F66BC600FC065C /* CALayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E25DFA25F66BC600FC065C /* CALayerView.swift */; };
 		11F3B30525F4466C00CE638F /* TextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F3B30425F4466C00CE638F /* TextEditor.swift */; };
 /* End PBXBuildFile section */
@@ -64,6 +65,7 @@
 		11B4CCC625F7D07E000843FB /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		11B4CCCC25F7EC94000843FB /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		11B4CCD425F9600A000843FB /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		11B4CCDC25F9C64D000843FB /* Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
 		11E25DFA25F66BC600FC065C /* CALayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayerView.swift; sourceTree = "<group>"; };
 		11F3B30425F4466C00CE638F /* TextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEditor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -180,6 +182,7 @@
 			children = (
 				11B4CCCC25F7EC94000843FB /* UIApplication.swift */,
 				11B4CCD425F9600A000843FB /* Date.swift */,
+				11B4CCDC25F9C64D000843FB /* Keyboard.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				11E25DFB25F66BC600FC065C /* CALayerView.swift in Sources */,
 				11B4CCCD25F7EC94000843FB /* UIApplication.swift in Sources */,
 				11B4CCD525F9600A000843FB /* Date.swift in Sources */,
+				11B4CCDD25F9C64D000843FB /* Keyboard.swift in Sources */,
 				1108335425F0169600903FE3 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
