@@ -11,7 +11,7 @@ struct EditView: View {
     @State var text: String = "美味しかった"
     @State var isShow: Bool = false
     @State var image: UIImage = UIImage(imageLiteralResourceName: "Camera")
-    var date = Date().string
+    @State var date = Date().string
     var body: some View {
         VStack {
             Button(action: {

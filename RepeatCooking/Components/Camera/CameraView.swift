@@ -55,7 +55,6 @@ struct CameraView: View {
                     HStack{
                         Button(action: {
                             avFoundationVM.image = nil
-                            self.isActive.toggle()
                         }) {
                                 Image(systemName: "xmark.circle.fill")
                                 .renderingMode(.original)
