@@ -14,11 +14,9 @@ struct CameraView: View {
     var body: some View {
         VStack {
             if avFoundationVM.image == nil {
-                Spacer()
-
-                ZStack(alignment: .bottom) {
+                VStack(alignment: .center) {
                     CALayerView(caLayer: avFoundationVM.previewLayer)
-
+                    Spacer()
                     Button(action: {
                         self.avFoundationVM.takePhoto()
                     }) {
@@ -39,7 +37,6 @@ struct CameraView: View {
                 ZStack(alignment: .topLeading) {
                     VStack {
                         Spacer()
-
                         Image(uiImage: avFoundationVM.image!)
                         .resizable()
                         .scaledToFill()
