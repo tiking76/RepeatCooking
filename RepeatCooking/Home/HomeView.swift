@@ -1,5 +1,5 @@
 //
-//  StoreView.swift
+//  HomeView.swift
 //  RepeatCooking
 //
 //  Created by tiking on 2021/03/11.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct StoreView: View {
+struct HomeView: View {
     var text: String = "おいしかった\nありがとう"
     var image: UIImage = UIImage(imageLiteralResourceName: "Camera")
     var date = Date().string
@@ -45,6 +45,6 @@ struct StoreView: View {
 
 struct StoreView_Previews: PreviewProvider {
     static var previews: some View {
-        StoreView()
+        HomeView()
     }
 }
