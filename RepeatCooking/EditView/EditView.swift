@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct EditView: View {
-    @State var text: String = "美味しかった"
+    @State var text: String = ""
     @State var isShow: Bool = false
     @State var image: UIImage = UIImage(imageLiteralResourceName: "Camera")
     @State var date = Date().string
