@@ -22,6 +22,10 @@
 	<string></string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>UIUserInterfaceStyle</key>
+	<string>Light</string>
+	<key>CFBundleDisplayName</key>
+	<string></string>
 	<key>NSCameraUsageDescription</key>
 	<string>take your video for sample swiftUI app</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>

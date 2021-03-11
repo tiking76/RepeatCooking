@@ -8,22 +8,30 @@
 import SwiftUI
 
 struct EditView: View {
-    @State var text: String = "aaaaaaaaaaaaaaaa"
+    @State var text: String = "美味しかった"
     @State var isShow: Bool = false
     @State var image: UIImage = UIImage(imageLiteralResourceName: "Camera")
-    //@ObservedObject var keyboard = KeyboardObserver()
+    var date = Date().string
     var body: some View {
         VStack {
             Button(action: {
                 isShow.toggle()
             }, label: {
-                Image(uiImage: image)
-                    .resizable()
-                    .frame(maxWidth: .infinity,
-                           minHeight: 200,
-                           maxHeight: 200,
-                           alignment: .center
-                    )
+                ZStack(alignment: .top, content: {
+                    Image(uiImage: image)
+                        .resizable()
+                        .frame(maxWidth: .infinity,
+                               minHeight: 200,
+                               maxHeight: 200,
+                               alignment: .center
+                        )
+                    HStack {
+                        Text(date)
+                            .foregroundColor(.black)
+                        Spacer()
+                    }
+                    .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
+                })
             })
             .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
             .fullScreenCover(isPresented: $isShow,
@@ -33,12 +41,13 @@ struct EditView: View {
                                 )})
             Form(content: {
                 Section(header: Text("ひとこと")) {
-                TextEditor(text: $text)
+                TextView(text: $text)
                     .frame(maxWidth: .infinity,
                            minHeight: 100,
                            maxHeight: 100,
                            alignment: .center
                     )
+                    .background(Color.clear)
                 }
             })
             .onTapGesture {
