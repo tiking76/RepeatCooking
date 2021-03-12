@@ -132,7 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				11B4CCED25F9D2FC000843FB /* Model */,
-				11B4CCCB25F7EC70000843FB /* Extentions */,
+				11B4CCCB25F7EC70000843FB /* Extensions */,
 				1188644A25F5690F00830671 /* Components */,
 				1185038525F3CDBA004A31A3 /* EditView */,
 				11B4CCE725F9D200000843FB /* Home */,
@@ -193,7 +193,7 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
-		11B4CCCB25F7EC70000843FB /* Extentions */ = {
+		11B4CCCB25F7EC70000843FB /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				11B4CCCC25F7EC94000843FB /* UIApplication.swift */,
@@ -201,7 +201,7 @@
 				11B4CCDC25F9C64D000843FB /* Keyboard.swift */,
 				1186603625FAD70900A32B3A /* Data+Image.swift */,
 			);
-			path = Extentions;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		11B4CCE725F9D200000843FB /* Home */ = {
