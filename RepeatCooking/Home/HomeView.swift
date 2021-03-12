@@ -10,7 +10,7 @@ import CoreData
 
 struct HomeView: View {
     @Environment(\.managedObjectContext) var managedObject
-    @FetchRequest(fetchRequest: CookItem.getAllMemoItems()) var cookItems: FetchedResults<CookItem>
+    @FetchRequest(fetchRequest: RepeatCooking.getAllMemoItems()) var cookItems: FetchedResults<RepeatCooking>
     @State var flag = false
     
     var body: some View {
@@ -30,10 +30,18 @@ struct HomeView: View {
             }
             Spacer()
             ScrollView {
-                ForEach(0..<10) {
-                    item in
-                    HomeViewItem()
-                }
+                    ForEach(cookItems) {
+                        item in
+                        Button(action: {
+                            flag.toggle()
+                        }) {
+                            HomeViewItem(image: item.image.toImage())
+                        }
+                        .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
+                        .sheet(isPresented: $flag, content: {
+                            EditView(managedObject: _managedObject, text: item.text, isShow: false, image: item.image.toImage(), date: item.cookedAt)
+                        })
+                    }
             }
         }
     }

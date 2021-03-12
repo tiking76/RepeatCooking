@@ -9,12 +9,36 @@ import SwiftUI
 
 struct EditView: View {
     @Environment(\.managedObjectContext) var managedObject
+    @Environment (\.presentationMode) var presentationMode
     @State var text: String = ""
     @State var isShow: Bool = false
     @State var image: UIImage = UIImage(imageLiteralResourceName: "Camera")
     @State var date = Date().string
+    
+    
     var body: some View {
         VStack {
+            HStack {
+                Spacer()
+                Button(action: {
+                    let cookItem = RepeatCooking(context: managedObject)
+                    cookItem.text = text
+                    cookItem.cookedAt = date
+                    cookItem.image = image.pngData()!
+                    do {
+                        try managedObject.save()
+                        print("\(text)を保存しました")
+                        presentationMode.wrappedValue.dismiss()
+                    } catch {
+                        print("saveに失敗しました")
+                        print(error)
+                    }
+                }){
+                    Text("save")
+                        .frame(width: 50, height: 30, alignment: .leading)
+                }
+                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 10))
+            }
             Button(action: {
                 isShow.toggle()
             }, label: {
@@ -56,15 +80,6 @@ struct EditView: View {
                 UIApplication.shared.closeKeyboard()
             }
         }
-        .navigationBarItems(leading: Button(action: {
-            do {
-                try managedObject.save()
-            } catch {
-                print("saveに失敗しました")
-            }
-        }){
-            Text("save")
-        })
     }
 }
 
