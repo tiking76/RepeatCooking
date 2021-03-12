@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct EditView: View {
+    @Environment(\.managedObjectContext) var managedObject
     @State var text: String = ""
     @State var isShow: Bool = false
     @State var image: UIImage = UIImage(imageLiteralResourceName: "Camera")
@@ -25,6 +26,7 @@ struct EditView: View {
                                maxHeight: 200,
                                alignment: .center
                         )
+                        .cornerRadius(8)
                     HStack {
                         Text(date)
                             .foregroundColor(.black)
@@ -54,6 +56,15 @@ struct EditView: View {
                 UIApplication.shared.closeKeyboard()
             }
         }
+        .navigationBarItems(leading: Button(action: {
+            do {
+                try managedObject.save()
+            } catch {
+                print("saveに失敗しました")
+            }
+        }){
+            Text("save")
+        })
     }
 }
 

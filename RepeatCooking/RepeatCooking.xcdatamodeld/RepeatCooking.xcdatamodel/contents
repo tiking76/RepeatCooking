@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="19H114" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Entity" representedClassName="Entity" syncable="YES" codeGenerationType="class">
-        <attribute name="cookedAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="image" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
-        <attribute name="text" optional="YES" attributeType="String"/>
+    <entity name="CookItem" representedClassName=".RepeatCooking" isAbstract="YES" syncable="YES" codeGenerationType="class">
+        <attribute name="cookedAt" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="text" attributeType="String"/>
     </entity>
     <elements>
-        <element name="Entity" positionX="-45" positionY="0" width="128" height="88"/>
+        <element name="CookItem" positionX="-45" positionY="0" width="128" height="73"/>
     </elements>
 </model>

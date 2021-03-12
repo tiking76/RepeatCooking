@@ -6,39 +6,35 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct HomeView: View {
-    var text: String = "おいしかった\nありがとう"
-    var image: UIImage = UIImage(imageLiteralResourceName: "Camera")
-    var date = Date().string
+    @Environment(\.managedObjectContext) var managedObject
+    @FetchRequest(fetchRequest: CookItem.getAllMemoItems()) var cookItems: FetchedResults<CookItem>
+    @State var flag = false
     
     var body: some View {
         VStack {
-            ZStack(alignment: .top, content: {
-                Image(uiImage: image)
-                    .resizable()
-                    .frame(maxWidth: .infinity,
-                           minHeight: 200,
-                           maxHeight: 200,
-                           alignment: .center
-                    )
-                .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
-                HStack {
-                    Text(date)
-                    Spacer()
+            HStack {
+                Spacer()
+                Button(action: {
+                    flag.toggle()
+                }) {
+                    Image(systemName: "plus.circle")
+                        .imageScale(.large)
+                        .frame(width: 100, height: 100, alignment: .center)
                 }
-                .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
-            })
-            Form(content: {
-                Section(header: Text("ひとこと")) {
-                    Text(text)
-                    .frame(maxWidth: .infinity,
-                           minHeight: 100,
-                           maxHeight: 100,
-                           alignment: .center
-                    )
+                .sheet(isPresented: $flag, content: {
+                    EditView()
+                })
+            }
+            Spacer()
+            ScrollView {
+                ForEach(0..<10) {
+                    item in
+                    HomeViewItem()
                 }
-            })
+            }
         }
     }
 }
