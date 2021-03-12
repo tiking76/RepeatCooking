@@ -14,6 +14,7 @@ struct EditView: View {
     @State var isShow: Bool = false
     @State var image: UIImage = UIImage(imageLiteralResourceName: "Camera")
     @State var date = Date().string
+    @Binding var flag: Bool
     
     
     var body: some View {
@@ -28,7 +29,7 @@ struct EditView: View {
                     do {
                         try managedObject.save()
                         print("\(text)を保存しました")
-                        presentationMode.wrappedValue.dismiss()
+                        flag.toggle()
                     } catch {
                         print("saveに失敗しました")
                         print(error)
@@ -85,6 +86,6 @@ struct EditView: View {
 
 struct EditView_Previews: PreviewProvider {
     static var previews: some View {
-        EditView()
+        EditView(flag: .constant(false))
     }
 }

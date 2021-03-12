@@ -25,7 +25,7 @@ struct HomeView: View {
                         .frame(width: 100, height: 100, alignment: .center)
                 }
                 .sheet(isPresented: $flag, content: {
-                    EditView()
+                    EditView(flag: $flag)
                 })
             }
             Spacer()
@@ -39,7 +39,7 @@ struct HomeView: View {
                         }
                         .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
                         .sheet(isPresented: $flag, content: {
-                            EditView(managedObject: _managedObject, text: item.text, isShow: false, image: item.image.toImage(), date: item.cookedAt)
+                            EditView(managedObject: _managedObject, text: item.text, isShow: false, image: item.image.toImage(), date: item.cookedAt, flag: $flag)
                         })
                     }
             }
