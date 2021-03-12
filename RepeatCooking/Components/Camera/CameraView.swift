@@ -14,11 +14,19 @@ struct CameraView: View {
     var body: some View {
         VStack {
             if avFoundationVM.image == nil {
-                Spacer()
-
                 ZStack(alignment: .bottom) {
                     CALayerView(caLayer: avFoundationVM.previewLayer)
-
+                    HStack {
+                        Button(action: {
+                            self.isActive.toggle()
+                        }) {
+                            Text("キャンセル")
+                        }
+                        .frame(width: 80, height: 80, alignment: .leading)
+                        Spacer()
+                    }
+                    .padding(.bottom, 100.0)
+                    .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0))
                     Button(action: {
                         self.avFoundationVM.takePhoto()
                     }) {
@@ -33,31 +41,27 @@ struct CameraView: View {
                 }.onDisappear {
                     self.avFoundationVM.endSession()
                 }
-
-                Spacer()
+                .background(Color.white)
             } else {
                 ZStack(alignment: .topLeading) {
                     VStack {
                         Spacer()
-
                         Image(uiImage: avFoundationVM.image!)
                         .resizable()
                         .scaledToFill()
                         .aspectRatio(contentMode: .fit)
-
                         Spacer()
                     }
                     HStack{
                         Button(action: {
                             avFoundationVM.image = nil
-                            self.isActive.toggle()
                         }) {
                                 Image(systemName: "xmark.circle.fill")
                                 .renderingMode(.original)
                                 .resizable()
                                 .frame(width: 30, height: 30, alignment: .leading)
                                 .foregroundColor(.white)
-                                .background(Color.gray)
+                                .background(Color.clear)
                         }
                         .frame(width: 80, height: 80, alignment: .center)
                         Button(action: {
@@ -65,13 +69,13 @@ struct CameraView: View {
                             //UIImageWriteToSavedPhotosAlbum(avFoundationVM.image!, nil, nil, nil)
                             image = avFoundationVM.image!
                             self.isActive.toggle()
-                        }, label: {
+                        }) {
                             Text("保存")
-                                .frame(width: 80, height: 80, alignment: .trailing)
-        
-                        })
+                        }
+                        .frame(width: 80, height: 80, alignment: .trailing)
                     }
                 }
+                .background(Color.white)
             }
         }
     }

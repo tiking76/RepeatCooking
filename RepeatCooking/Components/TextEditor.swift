@@ -7,9 +7,8 @@
 import SwiftUI
 
 // 複数行入力するためのTextField
-struct TextEditer: UIViewRepresentable {
+struct TextView: UIViewRepresentable {
     @Binding var text: String
-
     func makeUIView(context: Context) -> UITextView {
         let view = UITextView()
         view.delegate = context.coordinator
@@ -32,9 +31,9 @@ struct TextEditer: UIViewRepresentable {
     
     class Coordinator : NSObject, UITextViewDelegate {
 
-        var parent: TextEditer
+        var parent: TextView
 
-        init(_ textView: TextEditer) {
+        init(_ textView: TextView) {
             self.parent = textView
         }
 
