@@ -25,7 +25,7 @@ struct HomeView: View {
                         .frame(width: 100, height: 100, alignment: .center)
                 }
                 .sheet(isPresented: $flag, content: {
-                    EditView(flag: $flag)
+                    EditView(_text: "", _isShow: false, _image: UIImage(imageLiteralResourceName: "Camera"), _date: Date())
                 })
             }
             Spacer()
@@ -35,11 +35,10 @@ struct HomeView: View {
                         Button(action: {
                             flag.toggle()
                         }) {
-                            HomeViewItem(image: item.image.toImage())
+                            HomeViewItem(_image: item.image.toImage(), _dateString: item.cookedAt, _text: item.text)
                         }
-                        .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
                         .sheet(isPresented: $flag, content: {
-                            EditView(managedObject: _managedObject, text: item.text, isShow: false, image: item.image.toImage(), date: item.cookedAt, flag: $flag)
+                            EditView(_text: item.text, _isShow: false, _image: item.image.toImage(), _date: Date(dateString: item.cookedAt)!)
                         })
                     }
             }

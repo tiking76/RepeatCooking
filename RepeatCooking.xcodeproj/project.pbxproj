@@ -22,6 +22,7 @@
 		1186603225FAD57A00A32B3A /* CookItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1186603125FAD57A00A32B3A /* CookItem.swift */; };
 		1186603725FAD70900A32B3A /* Data+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1186603625FAD70900A32B3A /* Data+Image.swift */; };
 		1186604325FB237A00A32B3A /* RepeatCooking.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1186604125FB237A00A32B3A /* RepeatCooking.xcdatamodeld */; };
+		1186604E25FE9FE400A32B3A /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1186604D25FE9FE300A32B3A /* Color.swift */; };
 		11B4CC9625F7C0CA000843FB /* AVFoundationVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B4CC9525F7C0CA000843FB /* AVFoundationVM.swift */; };
 		11B4CCC725F7D07E000843FB /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B4CCC625F7D07E000843FB /* CameraView.swift */; };
 		11B4CCCD25F7EC94000843FB /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B4CCCC25F7EC94000843FB /* UIApplication.swift */; };
@@ -71,6 +72,7 @@
 		1186603125FAD57A00A32B3A /* CookItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookItem.swift; sourceTree = "<group>"; };
 		1186603625FAD70900A32B3A /* Data+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Image.swift"; sourceTree = "<group>"; };
 		1186604225FB237A00A32B3A /* RepeatCooking.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RepeatCooking.xcdatamodel; sourceTree = "<group>"; };
+		1186604D25FE9FE300A32B3A /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		11B4CC9525F7C0CA000843FB /* AVFoundationVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVFoundationVM.swift; sourceTree = "<group>"; };
 		11B4CCC625F7D07E000843FB /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		11B4CCCC25F7EC94000843FB /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 				11B4CCD425F9600A000843FB /* Date.swift */,
 				11B4CCDC25F9C64D000843FB /* Keyboard.swift */,
 				1186603625FAD70900A32B3A /* Data+Image.swift */,
+				1186604D25FE9FE300A32B3A /* Color.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				1186603225FAD57A00A32B3A /* CookItem.swift in Sources */,
 				1108335225F0169600903FE3 /* SceneDelegate.swift in Sources */,
 				11B4CCEF25F9D30C000843FB /* Model.swift in Sources */,
+				1186604E25FE9FE400A32B3A /* Color.swift in Sources */,
 				1185038725F3CDDB004A31A3 /* EditView.swift in Sources */,
 				11E25DFB25F66BC600FC065C /* CALayerView.swift in Sources */,
 				11B4CCCD25F7EC94000843FB /* UIApplication.swift in Sources */,

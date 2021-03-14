@@ -13,27 +13,25 @@ struct EditView: View {
     @State var text: String = ""
     @State var isShow: Bool = false
     @State var image: UIImage = UIImage(imageLiteralResourceName: "Camera")
-    @State var date = Date().string
-    @Binding var flag: Bool
+    @State var date = Date()
     
+    init(_text: String,
+         _isShow: Bool,
+         _image: UIImage,
+         _date: Date
+    ) {
+        text = _text
+        isShow = _isShow
+        image = _image
+        date = _date
+    }
     
     var body: some View {
         VStack {
             HStack {
                 Spacer()
                 Button(action: {
-                    let cookItem = RepeatCooking(context: managedObject)
-                    cookItem.text = text
-                    cookItem.cookedAt = date
-                    cookItem.image = image.pngData()!
-                    do {
-                        try managedObject.save()
-                        print("\(text)を保存しました")
-                        flag.toggle()
-                    } catch {
-                        print("saveに失敗しました")
-                        print(error)
-                    }
+                    
                 }){
                     Text("save")
                         .frame(width: 50, height: 30, alignment: .leading)
@@ -42,7 +40,7 @@ struct EditView: View {
             }
             Button(action: {
                 isShow.toggle()
-            }, label: {
+            }){
                 ZStack(alignment: .top, content: {
                     Image(uiImage: image)
                         .resizable()
@@ -53,21 +51,22 @@ struct EditView: View {
                         )
                         .cornerRadius(8)
                     HStack {
-                        Text(date)
+                        Text(date.string)
                             .foregroundColor(.black)
                         Spacer()
                     }
                     .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
                 })
-            })
+            }
             .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
             .fullScreenCover(isPresented: $isShow,
                              content: {
                                 CameraView(isActive: $isShow,
                                            image: $image
-                                )})
+                                )}
+            )
             Form(content: {
-                Section(header: Text("ひとこと")) {
+                Section(header: Text("メモ")) {
                 TextView(text: $text)
                     .frame(maxWidth: .infinity,
                            minHeight: 100,
@@ -82,10 +81,13 @@ struct EditView: View {
             }
         }
     }
+    private func storeDate() {
+        
+    }
 }
 
 struct EditView_Previews: PreviewProvider {
     static var previews: some View {
-        EditView(flag: .constant(false))
+        EditView(_text: "おいしかった", _isShow: false, _image: UIImage(imageLiteralResourceName: "Camera"), _date: Date())
     }
 }
