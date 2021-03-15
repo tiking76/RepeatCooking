@@ -21,8 +21,8 @@
 		11865FEC25FAB4E600A32B3A /* HomeViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11865FEB25FAB4E600A32B3A /* HomeViewItem.swift */; };
 		1186603225FAD57A00A32B3A /* CookItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1186603125FAD57A00A32B3A /* CookItem.swift */; };
 		1186603725FAD70900A32B3A /* Data+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1186603625FAD70900A32B3A /* Data+Image.swift */; };
-		1186604325FB237A00A32B3A /* RepeatCooking.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1186604125FB237A00A32B3A /* RepeatCooking.xcdatamodeld */; };
 		1186604E25FE9FE400A32B3A /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1186604D25FE9FE300A32B3A /* Color.swift */; };
+		1186606325FEE76600A32B3A /* RepeatCooking.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1186606125FEE76600A32B3A /* RepeatCooking.xcdatamodeld */; };
 		11B4CC9625F7C0CA000843FB /* AVFoundationVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B4CC9525F7C0CA000843FB /* AVFoundationVM.swift */; };
 		11B4CCC725F7D07E000843FB /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B4CCC625F7D07E000843FB /* CameraView.swift */; };
 		11B4CCCD25F7EC94000843FB /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B4CCCC25F7EC94000843FB /* UIApplication.swift */; };
@@ -71,8 +71,8 @@
 		11865FEB25FAB4E600A32B3A /* HomeViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewItem.swift; sourceTree = "<group>"; };
 		1186603125FAD57A00A32B3A /* CookItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookItem.swift; sourceTree = "<group>"; };
 		1186603625FAD70900A32B3A /* Data+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Image.swift"; sourceTree = "<group>"; };
-		1186604225FB237A00A32B3A /* RepeatCooking.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RepeatCooking.xcdatamodel; sourceTree = "<group>"; };
 		1186604D25FE9FE300A32B3A /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		1186606225FEE76600A32B3A /* RepeatCooking.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RepeatCooking.xcdatamodel; sourceTree = "<group>"; };
 		11B4CC9525F7C0CA000843FB /* AVFoundationVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVFoundationVM.swift; sourceTree = "<group>"; };
 		11B4CCC625F7D07E000843FB /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		11B4CCCC25F7EC94000843FB /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
@@ -133,6 +133,7 @@
 		1108334E25F0169600903FE3 /* RepeatCooking */ = {
 			isa = PBXGroup;
 			children = (
+				1186606025FEE73E00A32B3A /* DB */,
 				11B4CCED25F9D2FC000843FB /* Model */,
 				11B4CCCB25F7EC70000843FB /* Extensions */,
 				1188644A25F5690F00830671 /* Components */,
@@ -145,8 +146,6 @@
 				1108335A25F0169700903FE3 /* LaunchScreen.storyboard */,
 				1108335D25F0169700903FE3 /* Info.plist */,
 				1108335725F0169700903FE3 /* Preview Content */,
-				1186603125FAD57A00A32B3A /* CookItem.swift */,
-				1186604125FB237A00A32B3A /* RepeatCooking.xcdatamodeld */,
 			);
 			path = RepeatCooking;
 			sourceTree = "<group>";
@@ -184,6 +183,15 @@
 				1185038E25F3CE05004A31A3 /* EditStore.swift */,
 			);
 			path = EditView;
+			sourceTree = "<group>";
+		};
+		1186606025FEE73E00A32B3A /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				1186603125FAD57A00A32B3A /* CookItem.swift */,
+				1186606125FEE76600A32B3A /* RepeatCooking.xcdatamodeld */,
+			);
+			path = DB;
 			sourceTree = "<group>";
 		};
 		1188644A25F5690F00830671 /* Components */ = {
@@ -373,6 +381,7 @@
 				11B4CC9625F7C0CA000843FB /* AVFoundationVM.swift in Sources */,
 				1108335025F0169600903FE3 /* AppDelegate.swift in Sources */,
 				11865FEC25FAB4E600A32B3A /* HomeViewItem.swift in Sources */,
+				1186606325FEE76600A32B3A /* RepeatCooking.xcdatamodeld in Sources */,
 				1186603725FAD70900A32B3A /* Data+Image.swift in Sources */,
 				11F3B30525F4466C00CE638F /* TextEditor.swift in Sources */,
 				11B4CCC725F7D07E000843FB /* CameraView.swift in Sources */,
@@ -388,7 +397,6 @@
 				11B4CCD525F9600A000843FB /* Date.swift in Sources */,
 				11B4CCDD25F9C64D000843FB /* Keyboard.swift in Sources */,
 				1108335425F0169600903FE3 /* ContentView.swift in Sources */,
-				1186604325FB237A00A32B3A /* RepeatCooking.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -738,12 +746,12 @@
 /* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
-		1186604125FB237A00A32B3A /* RepeatCooking.xcdatamodeld */ = {
+		1186606125FEE76600A32B3A /* RepeatCooking.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				1186604225FB237A00A32B3A /* RepeatCooking.xcdatamodel */,
+				1186606225FEE76600A32B3A /* RepeatCooking.xcdatamodel */,
 			);
-			currentVersion = 1186604225FB237A00A32B3A /* RepeatCooking.xcdatamodel */;
+			currentVersion = 1186606225FEE76600A32B3A /* RepeatCooking.xcdatamodel */;
 			path = RepeatCooking.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
