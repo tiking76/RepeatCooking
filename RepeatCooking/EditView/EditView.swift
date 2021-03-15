@@ -31,7 +31,16 @@ struct EditView: View {
             HStack {
                 Spacer()
                 Button(action: {
-                    
+                    let cookItem = RepeatCooking(context: managedObject)
+                    cookItem.text = text
+                    cookItem.cookedAt = date.string
+                    cookItem.image = image.pngData()!
+                    do {
+                        try managedObject.save()
+                        presentationMode.wrappedValue.dismiss()
+                    } catch {
+                        print(error)
+                    }
                 }){
                     Text("save")
                         .frame(width: 50, height: 30, alignment: .leading)
