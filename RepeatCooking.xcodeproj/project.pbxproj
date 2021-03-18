@@ -31,7 +31,7 @@
 		11B4CCE925F9D247000843FB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B4CCE825F9D247000843FB /* HomeView.swift */; };
 		11B4CCEF25F9D30C000843FB /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B4CCEE25F9D30C000843FB /* Model.swift */; };
 		11E25DFB25F66BC600FC065C /* CALayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E25DFA25F66BC600FC065C /* CALayerView.swift */; };
-		11F3B30525F4466C00CE638F /* TextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F3B30425F4466C00CE638F /* TextEditor.swift */; };
+		11F3B30525F4466C00CE638F /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F3B30425F4466C00CE638F /* TextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,7 +81,7 @@
 		11B4CCE825F9D247000843FB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		11B4CCEE25F9D30C000843FB /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		11E25DFA25F66BC600FC065C /* CALayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayerView.swift; sourceTree = "<group>"; };
-		11F3B30425F4466C00CE638F /* TextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEditor.swift; sourceTree = "<group>"; };
+		11F3B30425F4466C00CE638F /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,7 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				11E25E0225F6F63700FC065C /* Camera */,
-				11F3B30425F4466C00CE638F /* TextEditor.swift */,
+				11F3B30425F4466C00CE638F /* TextView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -383,7 +383,7 @@
 				11865FEC25FAB4E600A32B3A /* HomeViewItem.swift in Sources */,
 				1186606325FEE76600A32B3A /* RepeatCooking.xcdatamodeld in Sources */,
 				1186603725FAD70900A32B3A /* Data+Image.swift in Sources */,
-				11F3B30525F4466C00CE638F /* TextEditor.swift in Sources */,
+				11F3B30525F4466C00CE638F /* TextView.swift in Sources */,
 				11B4CCC725F7D07E000843FB /* CameraView.swift in Sources */,
 				1185038F25F3CE05004A31A3 /* EditStore.swift in Sources */,
 				11B4CCE925F9D247000843FB /* HomeView.swift in Sources */,
