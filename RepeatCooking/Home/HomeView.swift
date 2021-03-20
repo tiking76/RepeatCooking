@@ -42,6 +42,7 @@ struct HomeView: View {
                         })
                     }
             }
+            .background(Color(UIColor.lightOrange))
         }
     }
 }

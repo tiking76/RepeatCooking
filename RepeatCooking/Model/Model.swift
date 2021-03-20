@@ -12,3 +12,4 @@ struct Model {
     let date: Date
     let text: String
 }
+

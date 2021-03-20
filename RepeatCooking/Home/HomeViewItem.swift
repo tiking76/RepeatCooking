@@ -21,25 +21,33 @@ struct HomeViewItem: View {
     }
     
     var body: some View {
-        ZStack {
-            VStack{
+        VStack {
+            ZStack {
                 Image(uiImage: image)
                     .resizable()
                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 150, alignment: .center)
                     .cornerRadius(8)
                     .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
-                HStack {
-                    Text(dateString)
-                        .foregroundColor(.black)
-                        .font(.title)
-                    Spacer()
-                    Text(text)
-                        .foregroundColor(.black)
-                        .frame(width: 100, height: 30, alignment: .leading)
-                }
-                .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
+                    HStack {
+                        VStack(alignment: .leading, spacing: 0) {
+                            Text(dateString)
+                                .foregroundColor(.white)
+                                .font(.largeTitle)
+                                .fontWeight(.bold)
+                            Spacer()
+                        }
+                        .padding()
+                        Spacer()
+                    }
+                    .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
             }
+            .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
+            Text(text)
+                .foregroundColor(.black)
+                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 30, alignment: .center)
         }
+        .background(Color.white)
+        .cornerRadius(8)
         .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
     }
 }

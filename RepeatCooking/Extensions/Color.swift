@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 extension UIColor {
-    static let lightOrange = UIColor(red: 255, green: 249, blue: 249, alpha: 1)
+    static let lightOrange = UIColor(red: 255/255, green: 249/255, blue: 249/255, alpha: 1)
 }
 
 enum ColorAssets {
