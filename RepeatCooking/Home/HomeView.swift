@@ -12,6 +12,7 @@ struct HomeView: View {
     @Environment(\.managedObjectContext) var managedObject
     @FetchRequest(fetchRequest: RepeatCooking.getAllMemoItems()) var cookItems: FetchedResults<RepeatCooking>
     @State var flag = false
+    @ObservedObject private var model = FetchModel()
     
     var body: some View {
         VStack {
@@ -22,10 +23,15 @@ struct HomeView: View {
                 }) {
                     Image(systemName: "plus.circle")
                         .imageScale(.large)
-                        .frame(width: 100, height: 100, alignment: .center)
+                        .frame(width: 100,
+                               height: 100,
+                               alignment: .center)
                 }
                 .sheet(isPresented: $flag, content: {
-                    EditView(_text: "", _isShow: false, _image: UIImage(imageLiteralResourceName: "Camera"), _date: Date())
+                    EditView(_text: "",
+                             _isShow: false,
+                             _image: UIImage(imageLiteralResourceName: "Camera"),
+                             _date: Date())
                 })
             }
             Spacer()
@@ -33,12 +39,21 @@ struct HomeView: View {
                     ForEach(cookItems) {
                         item in
                         Button(action: {
+                            model.image = item.image.toImage()
+                            model.dateString = item.cookedAt
+                            model.text = item.text
                             flag.toggle()
                         }) {
-                            HomeViewItem(_image: item.image.toImage(), _dateString: item.cookedAt, _text: item.text)
+                            HomeViewItem(_image: item.image.toImage(),
+                                         _dateString: item.cookedAt,
+                                         _text: item.text)
                         }
-                        .sheet(isPresented: $flag, content: {
-                            EditView(_text: item.text, _isShow: false, _image: item.image.toImage(), _date: Date(dateString: item.cookedAt)!)
+                        .sheet(isPresented: $flag,
+                               content: {
+                            EditView(_text: model.text,
+                                     _isShow: false,
+                                     _image: model.image,
+                                     _date: Date(dateString: model.dateString)!)
                         })
                     }
             }
