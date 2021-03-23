@@ -15,51 +15,61 @@ struct HomeView: View {
     @ObservedObject private var model = FetchModel()
     
     var body: some View {
-        VStack {
-            HStack {
-                Spacer()
-                Button(action: {
-                    flag.toggle()
-                }) {
-                    Image(systemName: "plus.circle")
-                        .imageScale(.large)
-                        .frame(width: 100,
-                               height: 100,
-                               alignment: .center)
+        ZStack {
+            Color.init(UIColor.lightOrange).edgesIgnoringSafeArea(.all)
+            VStack {
+                HStack {
+                    Spacer()
+                    Text("FoodPad")
+                        .font(.custom("Parisienne-Regular", size: 70))
+                        .frame(width: 300, height: 100, alignment: .trailing)
+                    Spacer()
+                    Button(action: {
+                        flag.toggle()
+                    }) {
+                        Image(systemName: "plus.circle")
+                            .imageScale(.large)
+                            .frame(width: 100,
+                                   height: 100,
+                                   alignment: .center)
+                    }
+                    .sheet(isPresented: $flag, content: {
+                        EditView(_text: "",
+                                 _isShow: false,
+                                 _image: UIImage(imageLiteralResourceName: "Camera"),
+                                 _date: Date())
+                    })
                 }
-                .sheet(isPresented: $flag, content: {
-                    EditView(_text: "",
-                             _isShow: false,
-                             _image: UIImage(imageLiteralResourceName: "Camera"),
-                             _date: Date())
-                })
-            }
-            Spacer()
-            ScrollView {
-                    ForEach(cookItems) {
-                        item in
-                        Button(action: {
-                            model.image = item.image.toImage()
-                            model.dateString = item.cookedAt
-                            model.text = item.text
-                            flag.toggle()
-                        }) {
-                            HomeViewItem(_image: item.image.toImage(),
-                                         _dateString: item.cookedAt,
-                                         _text: item.text
+                Spacer()
+                ScrollView {
+                        ForEach(cookItems) {
+                            item in
+                            Button(action: {
+                                model.image = item.image.toImage()
+                                model.dateString = item.cookedAt
+                                model.text = item.text
+                                flag.toggle()
+                            }) {
+                                HomeViewItem(_image: item.image.toImage(),
+                                             _dateString: item.cookedAt,
+                                             _text: item.text
+                                )
+                            }
+                            .sheet(isPresented: $flag,
+                                   content: {
+                                    EditView(_text: model.text,
+                                             _isShow: false,
+                                             _image: model.image,
+                                             _date: Date(dateString: model.dateString)!
+                                    )
+                                   }
                             )
                         }
-                        .sheet(isPresented: $flag,
-                               content: {
-                            EditView(_text: model.text,
-                                     _isShow: false,
-                                     _image: model.image,
-                                     _date: Date(dateString: model.dateString)!
-                            )
-                        })
-                    }
+                        .cornerRadius(8)
+                        .shadow(radius: 10)
+                        .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
+                }
             }
-            .background(Color(UIColor.lightOrange))
         }
     }
 }
