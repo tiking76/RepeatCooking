@@ -67,7 +67,10 @@ struct HomeView: View {
                         }
                         .cornerRadius(8)
                         .shadow(radius: 10)
-                        .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
+                        .padding(EdgeInsets(top: 10,
+                                            leading: 10,
+                                            bottom: 10,
+                                            trailing: 10))
                 }
             }
         }
