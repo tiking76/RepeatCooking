@@ -90,9 +90,6 @@ struct EditView: View {
             }
         }
     }
-    private func storeDate() {
-        
-    }
 }
 
 struct EditView_Previews: PreviewProvider {
