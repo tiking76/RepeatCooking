@@ -46,14 +46,16 @@ struct HomeView: View {
                         }) {
                             HomeViewItem(_image: item.image.toImage(),
                                          _dateString: item.cookedAt,
-                                         _text: item.text)
+                                         _text: item.text
+                            )
                         }
                         .sheet(isPresented: $flag,
                                content: {
                             EditView(_text: model.text,
                                      _isShow: false,
                                      _image: model.image,
-                                     _date: Date(dateString: model.dateString)!)
+                                     _date: Date(dateString: model.dateString)!
+                            )
                         })
                     }
             }

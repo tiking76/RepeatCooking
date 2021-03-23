@@ -38,16 +38,14 @@ struct HomeViewItem: View {
                     HStack {
                         VStack(alignment: .leading, spacing: 0) {
                             Text(dateString)
-                                .foregroundColor(.white)
-                                .font(.largeTitle)
-                                .fontWeight(.bold)
+                                .dateLable()
                             Spacer()
                         }
                         .padding()
                         Spacer()
                     }
-                    .padding(EdgeInsets(top: 10,
-                                        leading: 10,
+                    .padding(EdgeInsets(top: 0,
+                                        leading: 0,
                                         bottom: 10,
                                         trailing: 10))
             }

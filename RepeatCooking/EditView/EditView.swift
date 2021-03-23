@@ -37,7 +37,7 @@ struct EditView: View {
                     cookItem.image = image.pngData()!
                     do {
                         try managedObject.save()
-                        presentationMode.wrappedValue.dismiss()
+                        
                     } catch {
                         print(error)
                     }
@@ -61,7 +61,7 @@ struct EditView: View {
                         .cornerRadius(8)
                     HStack {
                         Text(date.string)
-                            .foregroundColor(.black)
+                            .dateLable()
                         Spacer()
                     }
                     .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
