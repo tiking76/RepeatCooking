@@ -82,7 +82,6 @@ struct EditView: View {
                            maxHeight: 100,
                            alignment: .center
                     )
-                    .background(Color.clear)
                 }
             })
             .onTapGesture {
