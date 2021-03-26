@@ -54,6 +54,9 @@ struct HomeView: View {
                                              _dateString: item.cookedAt,
                                              _text: item.text
                                 )
+                                .overlay(LongTouchGestureView(longTap: {
+                                    print("tap")
+                                }))
                             }
                             .sheet(isPresented: $flag,
                                    content: {
