@@ -11,6 +11,7 @@ struct HomeViewItem: View {
     private var image: UIImage
     private var dateString: String
     private var text: String
+    @State var isremove = false
     
     init(_image: UIImage,
          _dateString: String,
@@ -53,13 +54,30 @@ struct HomeViewItem: View {
                                 leading: 10,
                                 bottom: 10,
                                 trailing: 10))
-            Text(text)
-                .foregroundColor(.black)
-                .frame(minWidth: 0,
-                       maxWidth: .infinity,
-                       minHeight: 0,
-                       maxHeight: 30,
-                       alignment: .center)
+            HStack {
+                Text(text)
+                    .foregroundColor(.black)
+                    .frame(minWidth: 0,
+                           maxWidth: .infinity,
+                           minHeight: 0,
+                           maxHeight: 30,
+                           alignment: .center)
+                    .padding(EdgeInsets(top: 0, leading: 100, bottom: 10, trailing: 0))
+                Button(action: {
+                    isremove.toggle()
+                }) {
+                    Image(systemName: "trash.fill")
+                        .frame(width: 50, height: 50, alignment: .trailing)
+                        .foregroundColor(.black)
+                        .padding(EdgeInsets(top: 0,
+                                            leading: 10,
+                                            bottom: 10,
+                                            trailing: 20))
+                }
+                .alert(isPresented: $isremove, content: {
+                    Alert(title: Text(text))
+                })
+            }
         }
         .background(Color.white)
         .cornerRadius(8)

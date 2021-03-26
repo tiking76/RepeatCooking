@@ -12,6 +12,7 @@ struct HomeView: View {
     @Environment(\.managedObjectContext) var managedObject
     @FetchRequest(fetchRequest: RepeatCooking.getAllMemoItems()) var cookItems: FetchedResults<RepeatCooking>
     @State var flag = false
+    @State var isremove = false
     @ObservedObject private var model = FetchModel()
     
     var body: some View {
@@ -44,29 +45,28 @@ struct HomeView: View {
                 ScrollView {
                         ForEach(cookItems) {
                             item in
-                            Button(action: {
-                                model.image = item.image.toImage()
-                                model.dateString = item.cookedAt
-                                model.text = item.text
-                                flag.toggle()
-                            }) {
-                                HomeViewItem(_image: item.image.toImage(),
-                                             _dateString: item.cookedAt,
-                                             _text: item.text
-                                )
-                                .overlay(LongTouchGestureView(longTap: {
-                                    print("tap")
-                                }))
-                            }
-                            .sheet(isPresented: $flag,
-                                   content: {
-                                    EditView(_text: model.text,
-                                             _isShow: false,
-                                             _image: model.image,
-                                             _date: Date(dateString: model.dateString)!
+                            ZStack {
+                                Button(action: {
+                                    model.image = item.image.toImage()
+                                    model.dateString = item.cookedAt
+                                    model.text = item.text
+                                    flag.toggle()
+                                }) {
+                                    HomeViewItem(_image: item.image.toImage(),
+                                                 _dateString: item.cookedAt,
+                                                 _text: item.text
                                     )
-                                   }
-                            )
+                                }
+                                .sheet(isPresented: $flag,
+                                       content: {
+                                        EditView(_text: model.text,
+                                                 _isShow: false,
+                                                 _image: model.image,
+                                                 _date: Date(dateString: model.dateString)!
+                                        )
+                                       }
+                                )
+                            }
                         }
                         .cornerRadius(8)
                         .shadow(radius: 10)
@@ -76,6 +76,17 @@ struct HomeView: View {
                                             trailing: 10))
                 }
             }
+        }
+    }
+    func removeItem(at offsets: IndexSet) {
+        for index in offsets {
+            let item = cookItems[index]
+            managedObject.delete(item)
+        }
+        do {
+            try managedObject.save()
+        }catch {
+            print("faild delete")
         }
     }
 }
