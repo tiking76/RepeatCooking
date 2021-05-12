@@ -5,15 +5,15 @@
 //  Created by tiking on 2021/03/04.
 //
 
-import UIKit
 import CoreData
+import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     // NSPersistentContainerの取得
     lazy var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "RepeatCooking")
-        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+        container.loadPersistentStores(completionHandler: { (_, error) in
             if let error = error as NSError? {
                 print(error.localizedDescription)
             }
@@ -44,4 +44,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
     }
 }
-

@@ -9,7 +9,7 @@ import SwiftUI
 
 //UIViewRepresentableにするとframe(width: 0 ,height:0)になり表示されなくなる
 struct CALayerView: UIViewControllerRepresentable {
-    var caLayer:CALayer
+    var caLayer: CALayer
 
     func makeUIViewController(context: UIViewControllerRepresentableContext<CALayerView>) -> UIViewController {
         let viewController = UIViewController()

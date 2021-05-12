@@ -1,0 +1,21 @@
+disabled_rules:
+  - file_length
+  - nesting
+  - type_name
+  - force_cast
+  - weak_delegate
+  - line_length
+  - function_parameter_count
+  - discouraged_optional_boolean
+opt_in_rules:
+  - toggle_bool
+  - closure_spacing
+  - array_init
+  - attributes
+  - closure_end_indentation
+  - empty_count
+  - sorted_first_last
+  - sorted_imports
+  - switch_case_on_newline
+included:
+  - RepeatCooking

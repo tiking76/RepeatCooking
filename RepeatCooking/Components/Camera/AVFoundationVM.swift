@@ -5,22 +5,22 @@
 //  Created by tiking on 2021/03/09.
 //
 
-import UIKit
-import Combine
 import AVFoundation
+import Combine
+import UIKit
 
 class AVFoundationVM: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, ObservableObject {
     ///撮影した画像
     @Published var image: UIImage?
     ///プレビュー用レイヤー
-    var previewLayer:CALayer!
+    var previewLayer: CALayer!
 
     ///撮影開始フラグ
-    private var _takePhoto:Bool = false
+    private var _takePhoto: Bool = false
     ///セッション
     private let captureSession = AVCaptureSession()
     ///撮影デバイス
-    private var capturepDevice:AVCaptureDevice!
+    private var capturepDevice: AVCaptureDevice!
 
     override init() {
         super.init()
@@ -55,7 +55,7 @@ class AVFoundationVM: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, Ob
         self.previewLayer = previewLayer
 
         let dataOutput = AVCaptureVideoDataOutput()
-        dataOutput.videoSettings = [kCVPixelBufferPixelFormatTypeKey as String:kCVPixelFormatType_32BGRA]
+        dataOutput.videoSettings = [kCVPixelBufferPixelFormatTypeKey as String: kCVPixelFormatType_32BGRA]
 
         if captureSession.canAddOutput(dataOutput) {
             captureSession.addOutput(dataOutput)

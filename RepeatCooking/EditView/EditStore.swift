@@ -8,11 +8,11 @@
 import ComposableArchitecture
 
 struct EditState: Equatable {
-    
+
 }
 
 enum EditAdction: Equatable {
-    
+
 }
 
 struct EditEnvironment {

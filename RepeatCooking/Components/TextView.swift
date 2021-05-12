@@ -28,8 +28,8 @@ struct TextView: UIViewRepresentable {
     func makeCoordinator() -> Coordinator {
         Coordinator(self)
     }
-    
-    class Coordinator : NSObject, UITextViewDelegate {
+
+    class Coordinator: NSObject, UITextViewDelegate {
 
         var parent: TextView
 
@@ -46,4 +46,3 @@ struct TextView: UIViewRepresentable {
         }
     }
 }
-

@@ -18,6 +18,7 @@
 		1108338425F01A8200903FE3 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 1108338325F01A8200903FE3 /* ComposableArchitecture */; };
 		110965A82609B4C50059C6A7 /* TextFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110965A72609B4C50059C6A7 /* TextFont.swift */; };
 		110965AE2609C0250059C6A7 /* Parisienne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 110965AD2609C0250059C6A7 /* Parisienne-Regular.ttf */; };
+		115DA841260D9C88001E50EF /* LongTouchGestureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115DA840260D9C88001E50EF /* LongTouchGestureView.swift */; };
 		1185038725F3CDDB004A31A3 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1185038625F3CDDB004A31A3 /* EditView.swift */; };
 		1185038F25F3CE05004A31A3 /* EditStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1185038E25F3CE05004A31A3 /* EditStore.swift */; };
 		11865FEC25FAB4E600A32B3A /* HomeViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11865FEB25FAB4E600A32B3A /* HomeViewItem.swift */; };
@@ -70,6 +71,7 @@
 		1108337325F0169800903FE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		110965A72609B4C50059C6A7 /* TextFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFont.swift; sourceTree = "<group>"; };
 		110965AD2609C0250059C6A7 /* Parisienne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Parisienne-Regular.ttf"; sourceTree = "<group>"; };
+		115DA840260D9C88001E50EF /* LongTouchGestureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongTouchGestureView.swift; sourceTree = "<group>"; };
 		1185038625F3CDDB004A31A3 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 		1185038E25F3CE05004A31A3 /* EditStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditStore.swift; sourceTree = "<group>"; };
 		11865FEB25FAB4E600A32B3A /* HomeViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewItem.swift; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 			children = (
 				11E25E0225F6F63700FC065C /* Camera */,
 				11F3B30425F4466C00CE638F /* TextView.swift */,
+				115DA840260D9C88001E50EF /* LongTouchGestureView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				1108334825F0169600903FE3 /* Sources */,
 				1108334925F0169600903FE3 /* Frameworks */,
 				1108334A25F0169600903FE3 /* Resources */,
+				11AD6BCD264C3BE400BFDD14 /* Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -286,6 +290,7 @@
 				1108335E25F0169800903FE3 /* Sources */,
 				1108335F25F0169800903FE3 /* Frameworks */,
 				1108336025F0169800903FE3 /* Resources */,
+				11AD6BCB264C3AD100BFDD14 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -388,6 +393,44 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		11AD6BCB264C3AD100BFDD14 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n";
+		};
+		11AD6BCD264C3BE400BFDD14 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "scripts/swiftlint.sh\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1108334825F0169600903FE3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -403,6 +446,7 @@
 				1185038F25F3CE05004A31A3 /* EditStore.swift in Sources */,
 				11B4CCE925F9D247000843FB /* HomeView.swift in Sources */,
 				110965A82609B4C50059C6A7 /* TextFont.swift in Sources */,
+				115DA841260D9C88001E50EF /* LongTouchGestureView.swift in Sources */,
 				1186603225FAD57A00A32B3A /* CookItem.swift in Sources */,
 				1108335225F0169600903FE3 /* SceneDelegate.swift in Sources */,
 				11B4CCEF25F9D30C000843FB /* Model.swift in Sources */,
