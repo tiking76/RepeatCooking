@@ -31,9 +31,9 @@ struct CameraView: View {
                         self.avFoundationVM.takePhoto()
                     }) {
                         Image(systemName: "camera.circle.fill")
-                        .renderingMode(.original)
-                        .resizable()
-                        .frame(width: 80, height: 80, alignment: .center)
+                            .renderingMode(.original)
+                            .resizable()
+                            .frame(width: 80, height: 80, alignment: .center)
                     }
                     .padding(.bottom, 100.0)
                 }.onAppear {
@@ -47,16 +47,16 @@ struct CameraView: View {
                     VStack {
                         Spacer()
                         Image(uiImage: avFoundationVM.image!)
-                        .resizable()
-                        .scaledToFill()
-                        .aspectRatio(contentMode: .fit)
+                            .resizable()
+                            .scaledToFill()
+                            .aspectRatio(contentMode: .fit)
                         Spacer()
                     }
-                    HStack{
+                    HStack {
                         Button(action: {
                             avFoundationVM.image = nil
                         }) {
-                                Image(systemName: "xmark.circle.fill")
+                            Image(systemName: "xmark.circle.fill")
                                 .renderingMode(.original)
                                 .resizable()
                                 .frame(width: 30, height: 30, alignment: .leading)

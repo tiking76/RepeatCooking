@@ -7,22 +7,26 @@
 
 import SwiftUI
 
-struct Model {
-    let image: UIImage
-    let date: Date
-    let text: String
-}
-
-final class FetchModel: ObservableObject {
+final class SendModelRequest: ObservableObject {
+    @Environment(\.managedObjectContext) var managedObject
     @Published var image: UIImage = UIImage(imageLiteralResourceName: "Camera")
     @Published var dateString: String = Date().string
     @Published var text: String = ""
-    
-//    init(_image: UIImage,
-//         _date: Date,
-//         _text: String) {
-//        image = _image
-//        date = _date
-//        text = _text
-//    }
+
+    struct Model {
+        let image: UIImage
+        let date: Date
+        let text: String
+    }
+
+    func save(model: Model) {
+        let cookItem = RepeatCooking(context: managedObject)
+        do {
+            cookItem.text = model.text
+            cookItem.cookedAt = model.date.string
+            if let image = model.image.pngData() {
+                cookItem.image = image
+            }
+        }
+    }
 }

@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct LongTouchGestureView: UIViewRepresentable {
-    
+
     let longTap: (() -> Void)
-    
+
     func makeUIView(context: UIViewRepresentableContext<LongTouchGestureView>) -> some UIView {
         let view = UIView(frame: .zero)
         let gesture = UILongPressGestureRecognizer(target: context.coordinator, action: #selector(context.coordinator.action))
@@ -23,7 +23,7 @@ struct LongTouchGestureView: UIViewRepresentable {
     func makeCoordinator() -> Coordinator {
         Coordinator(callback: longTap)
     }
-    
+
     class Coordinator: NSObject {
         let callback: () -> Void
         init(callback: @escaping () -> Void) {

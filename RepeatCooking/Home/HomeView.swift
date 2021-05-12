@@ -5,16 +5,17 @@
 //  Created by tiking on 2021/03/11.
 //
 
-import SwiftUI
 import CoreData
+import SwiftUI
 
 struct HomeView: View {
     @Environment(\.managedObjectContext) var managedObject
+    @Environment(\.presentationMode) var presentationMode
     @FetchRequest(fetchRequest: RepeatCooking.getAllMemoItems()) var cookItems: FetchedResults<RepeatCooking>
     @State var flag = false
-    @State var isremove = false
-    @ObservedObject private var model = FetchModel()
-    
+    @State var isRemove = false
+    @StateObject private var model = SendModelRequest()
+
     var body: some View {
         ZStack {
             Color.init(UIColor.lightOrange).edgesIgnoringSafeArea(.all)
@@ -35,45 +36,34 @@ struct HomeView: View {
                                    alignment: .center)
                     }
                     .sheet(isPresented: $flag, content: {
-                        EditView(_text: "",
-                                 _isShow: false,
-                                 _image: UIImage(imageLiteralResourceName: "Camera"),
-                                 _date: Date())
+                        EditView(text: "",
+                                 isShow: false,
+                                 image: UIImage(imageLiteralResourceName: "Camera"),
+                                 date: Date(), dismiss: {})
                     })
                 }
                 Spacer()
                 ScrollView {
-                        ForEach(cookItems) {
-                            item in
-                            ZStack {
-                                Button(action: {
-                                    model.image = item.image.toImage()
-                                    model.dateString = item.cookedAt
-                                    model.text = item.text
-                                    flag.toggle()
-                                }) {
-                                    HomeViewItem(_image: item.image.toImage(),
-                                                 _dateString: item.cookedAt,
-                                                 _text: item.text
-                                    )
-                                }
-                                .sheet(isPresented: $flag,
-                                       content: {
-                                        EditView(_text: model.text,
-                                                 _isShow: false,
-                                                 _image: model.image,
-                                                 _date: Date(dateString: model.dateString)!
-                                        )
-                                       }
+                    ForEach(cookItems) {
+                        item in
+                        ZStack {
+                            Button(action: {}) {
+                                HomeViewItem(image: item.image.toImage(), dateString: item.cookedAt, text2: item.text, callback: { print("completed") }
                                 )
                             }
+                            .sheet(isPresented: $flag,
+                                   content: {
+                                    EditView(text: model.text, isShow: false, image: model.image, date: Date(dateString: model.dateString)!, dismiss: {})
+                                   }
+                            )
                         }
-                        .cornerRadius(8)
-                        .shadow(radius: 10)
-                        .padding(EdgeInsets(top: 10,
-                                            leading: 10,
-                                            bottom: 10,
-                                            trailing: 10))
+                    }
+                    .cornerRadius(8)
+                    .shadow(radius: 10)
+                    .padding(EdgeInsets(top: 10,
+                                        leading: 10,
+                                        bottom: 10,
+                                        trailing: 10))
                 }
             }
         }
@@ -85,7 +75,7 @@ struct HomeView: View {
         }
         do {
             try managedObject.save()
-        }catch {
+        } catch {
             print("faild delete")
         }
     }

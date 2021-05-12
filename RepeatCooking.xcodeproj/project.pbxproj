@@ -269,6 +269,7 @@
 				1108334825F0169600903FE3 /* Sources */,
 				1108334925F0169600903FE3 /* Frameworks */,
 				1108334A25F0169600903FE3 /* Resources */,
+				11AD6BCD264C3BE400BFDD14 /* Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -289,6 +290,7 @@
 				1108335E25F0169800903FE3 /* Sources */,
 				1108335F25F0169800903FE3 /* Frameworks */,
 				1108336025F0169800903FE3 /* Resources */,
+				11AD6BCB264C3AD100BFDD14 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -390,6 +392,44 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		11AD6BCB264C3AD100BFDD14 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n";
+		};
+		11AD6BCD264C3BE400BFDD14 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "scripts/swiftlint.sh\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1108334825F0169600903FE3 /* Sources */ = {
