@@ -15,6 +15,7 @@ struct HomeView: View {
     @State var flag = false
     @State var isRemove = false
     @StateObject private var model = SendModelRequest()
+    let action: () -> Void
 
     var body: some View {
         ZStack {
@@ -44,10 +45,9 @@ struct HomeView: View {
                 }
                 Spacer()
                 ScrollView {
-                    ForEach(cookItems) {
-                        item in
+                    ForEach(cookItems) { item in
                         ZStack {
-                            Button(action: {}) {
+                            Button(action: action) {
                                 HomeViewItem(image: item.image.toImage(), dateString: item.cookedAt, text2: item.text, callback: { print("completed") }
                                 )
                             }
@@ -78,11 +78,5 @@ struct HomeView: View {
         } catch {
             print("faild delete")
         }
-    }
-}
-
-struct StoreView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeView()
     }
 }

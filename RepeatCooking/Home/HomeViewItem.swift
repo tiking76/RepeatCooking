@@ -60,9 +60,3 @@ struct HomeViewItem: View {
         .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
     }
 }
-
-struct HomeViewItem_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeViewItem(image: UIImage(imageLiteralResourceName: "Camera"), dateString: Date().string, text2: "クッキー", callback: { print("test") })
-    }
-}

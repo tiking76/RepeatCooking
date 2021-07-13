@@ -1,10 +1,3 @@
-//
-//  TextFont.swift
-//  RepeatCooking
-//
-//  Created by tiking on 2021/03/23.
-//
-
 import SwiftUI
 
 extension Text {

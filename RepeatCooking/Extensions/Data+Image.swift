@@ -1,10 +1,3 @@
-//
-//  Data+Image.swift
-//  RepeatCooking
-//
-//  Created by tiking on 2021/03/12.
-//
-
 import Foundation
 import UIKit
 
