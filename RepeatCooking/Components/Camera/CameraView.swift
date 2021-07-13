@@ -19,8 +19,7 @@ struct CameraView: View {
                     HStack {
                         Button(action: {
                             self.isActive.toggle()
-                        }) {
-                            Text("キャンセル")
+                        }) { Text("キャンセル")
                         }
                         .frame(width: 80, height: 80, alignment: .leading)
                         Spacer()

@@ -26,6 +26,9 @@
 		1186603725FAD70900A32B3A /* Data+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1186603625FAD70900A32B3A /* Data+Image.swift */; };
 		1186604E25FE9FE400A32B3A /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1186604D25FE9FE300A32B3A /* Color.swift */; };
 		1186606325FEE76600A32B3A /* RepeatCooking.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1186606125FEE76600A32B3A /* RepeatCooking.xcdatamodeld */; };
+		11A9F42B268F396E00FA1CB0 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A9F42A268F396E00FA1CB0 /* Font.swift */; };
+		11A9F42D268F39CC00FA1CB0 /* Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A9F42C268F39CC00FA1CB0 /* Padding.swift */; };
+		11A9F430268F3AEF00FA1CB0 /* Hidden.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A9F42F268F3AEF00FA1CB0 /* Hidden.swift */; };
 		11B4CC9625F7C0CA000843FB /* AVFoundationVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B4CC9525F7C0CA000843FB /* AVFoundationVM.swift */; };
 		11B4CCC725F7D07E000843FB /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B4CCC625F7D07E000843FB /* CameraView.swift */; };
 		11B4CCCD25F7EC94000843FB /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B4CCCC25F7EC94000843FB /* UIApplication.swift */; };
@@ -79,6 +82,9 @@
 		1186603625FAD70900A32B3A /* Data+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Image.swift"; sourceTree = "<group>"; };
 		1186604D25FE9FE300A32B3A /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		1186606225FEE76600A32B3A /* RepeatCooking.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RepeatCooking.xcdatamodel; sourceTree = "<group>"; };
+		11A9F42A268F396E00FA1CB0 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		11A9F42C268F39CC00FA1CB0 /* Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Padding.swift; sourceTree = "<group>"; };
+		11A9F42F268F3AEF00FA1CB0 /* Hidden.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hidden.swift; sourceTree = "<group>"; };
 		11B4CC9525F7C0CA000843FB /* AVFoundationVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVFoundationVM.swift; sourceTree = "<group>"; };
 		11B4CCC625F7D07E000843FB /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		11B4CCCC25F7EC94000843FB /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
@@ -139,6 +145,7 @@
 		1108334E25F0169600903FE3 /* RepeatCooking */ = {
 			isa = PBXGroup;
 			children = (
+				11A9F42E268F3AD300FA1CB0 /* Modifier */,
 				110965AC2609BE880059C6A7 /* Fonts */,
 				1186606025FEE73E00A32B3A /* DB */,
 				11B4CCED25F9D2FC000843FB /* Model */,
@@ -219,6 +226,14 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		11A9F42E268F3AD300FA1CB0 /* Modifier */ = {
+			isa = PBXGroup;
+			children = (
+				11A9F42F268F3AEF00FA1CB0 /* Hidden.swift */,
+			);
+			path = Modifier;
+			sourceTree = "<group>";
+		};
 		11B4CCCB25F7EC70000843FB /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -228,6 +243,8 @@
 				1186603625FAD70900A32B3A /* Data+Image.swift */,
 				1186604D25FE9FE300A32B3A /* Color.swift */,
 				110965A72609B4C50059C6A7 /* TextFont.swift */,
+				11A9F42A268F396E00FA1CB0 /* Font.swift */,
+				11A9F42C268F39CC00FA1CB0 /* Padding.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -439,6 +456,7 @@
 				11B4CC9625F7C0CA000843FB /* AVFoundationVM.swift in Sources */,
 				1108335025F0169600903FE3 /* AppDelegate.swift in Sources */,
 				11865FEC25FAB4E600A32B3A /* HomeViewItem.swift in Sources */,
+				11A9F42D268F39CC00FA1CB0 /* Padding.swift in Sources */,
 				1186606325FEE76600A32B3A /* RepeatCooking.xcdatamodeld in Sources */,
 				1186603725FAD70900A32B3A /* Data+Image.swift in Sources */,
 				11F3B30525F4466C00CE638F /* TextView.swift in Sources */,
@@ -446,8 +464,10 @@
 				1185038F25F3CE05004A31A3 /* EditStore.swift in Sources */,
 				11B4CCE925F9D247000843FB /* HomeView.swift in Sources */,
 				110965A82609B4C50059C6A7 /* TextFont.swift in Sources */,
+				11A9F430268F3AEF00FA1CB0 /* Hidden.swift in Sources */,
 				115DA841260D9C88001E50EF /* LongTouchGestureView.swift in Sources */,
 				1186603225FAD57A00A32B3A /* CookItem.swift in Sources */,
+				11A9F42B268F396E00FA1CB0 /* Font.swift in Sources */,
 				1108335225F0169600903FE3 /* SceneDelegate.swift in Sources */,
 				11B4CCEF25F9D30C000843FB /* Model.swift in Sources */,
 				1186604E25FE9FE400A32B3A /* Color.swift in Sources */,

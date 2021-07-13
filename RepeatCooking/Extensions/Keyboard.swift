@@ -1,10 +1,5 @@
 //
 //  Keyboard.swift
-//  RepeatCooking
-//
-//  Created by tiking on 2021/03/11.
-//
-
 import Combine
 import SwiftUI
 
